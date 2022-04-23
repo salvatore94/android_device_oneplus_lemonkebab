@@ -26,7 +26,7 @@ $(call inherit-product, vendor/aosp/common.mk)
 
 # ArcanaOS
 ARCANA_DEVICE := Oneplus-8T/9R
-ARCANA_MAINTAINER := Soumyo/IU
+ARCANA_MAINTAINER := mina
 ARCANA_OFFICIAL := true
 COPY_APN_SYSTEM := true
 
