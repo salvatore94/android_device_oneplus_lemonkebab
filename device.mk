@@ -707,5 +707,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+
+# vintf
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/oneplus/lemonkebab/lemonkebab-vendor.mk)
