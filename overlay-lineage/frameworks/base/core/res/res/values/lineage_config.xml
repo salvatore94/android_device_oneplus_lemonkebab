@@ -15,17 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Paths to the libraries that contain device specific key handlers -->
-    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
-        <item>/system_ext/priv-app/TouchGestures/TouchGestures.apk</item>
-        <item>/system_ext/priv-app/OnePlusSettings/OnePlusSettings.apk</item>
-    </string-array>
-
-    <!-- Names of the key handler classes -->
-    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.android.touch.gestures.KeyHandler</item>
-        <item>org.aosp.device.OnePlusSettings.Services.KeyHandler</item>
-    </string-array>
 
     <!-- The location of the devices physical tri state switch
          0: Left side
@@ -75,17 +64,8 @@
     -->
     <string name="config_defaultAttentionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService</string>
 
-    <!-- The list of components which should be automatically disabled for a specific device. -->
-    <string-array name="config_deviceDisabledComponents" translatable="false">
-        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
-        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
-    </string-array>
-
     <!-- Whether or not we should show vendor mismatch message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
-
-    <!-- the number of the max cached processes in the system. -->
-    <integer name="config_customizedMaxCachedProcesses">80</integer>
     
     <!-- WA for lags caused by blur/ qs and ls album art filter etc.. -->
     <bool name="config_avoidGfxAccel">true</bool>
