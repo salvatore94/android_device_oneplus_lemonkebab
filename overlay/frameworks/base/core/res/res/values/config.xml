@@ -1319,9 +1319,6 @@
         <item>87</item>   <!-- <item>sensorRadius</item> -->
     </integer-array>
     
-    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash -->
-    <bool name="config_zramWriteback">true</bool>
-    
     <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
     <bool name="config_displayBlanksAfterDoze">false</bool>
 
