@@ -20,9 +20,11 @@ dontaudit hal_wifi_default self:capability sys_module;
 
 # please don't kill yourself unless it's allowed
 dontaudit { fsck toolbox vdc zygote } self:capability kill;
+dontaudit fsck op2_block_device:blk_file { read write };
 
 # We never apply OTAs when GSI is running
 dontaudit hal_bootctl_default gsi_metadata_file:dir search;
+dontaudit hal_bootctl_default self:capability { sys_admin };
 
 # too noisy, and shouldn't even be granted by default unless necessary
 dontaudit { gmscore_app hal_camera_default } property_type:file r_file_perms;
@@ -39,3 +41,7 @@ dontaudit untrusted_app_all selinuxfs:file read;
 
 # all other no-context attempt by apps (as spotted on iQIYI)
 dontaudit untrusted_app_all sysfs_net:dir search;
+
+dontaudit hal_fingerprint_default default_prop:file { read };
+dontaudit rild default_prop:file { read };
+dontaudit vendor_init default_prop:file { read };

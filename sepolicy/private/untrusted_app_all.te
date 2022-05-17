@@ -1,0 +1,1 @@
+dontaudit untrusted_app_all proc_net_tcp_udp:file { read };

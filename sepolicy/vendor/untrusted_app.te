@@ -1,1 +1,22 @@
 allow untrusted_app zygote:unix_stream_socket getopt;
+allow untrusted_app proc_net:file { read open getattr };
+allow untrusted_app proc_zoneinfo:file { read open getattr };
+allow untrusted_app cache_file:file { read };
+allow untrusted_app cache_file:lnk_file { read };
+allow untrusted_app mnt_sdcard_file:file { read };
+allow untrusted_app input_device:dir { search getattr };
+allow untrusted_app app_data_file:file { read };
+allow untrusted_app qemu_sf_lcd_density_prop:file { read open getattr map };
+allow untrusted_app qemu_hw_prop:file { read open getattr map };
+allow untrusted_app color_display_service:service_manager { find };
+allow untrusted_app window_service:service_manager { find };
+
+dontaudit untrusted_app dalvikcache_data_file:file { execmod };
+dontaudit untrusted_app system_lib_file:file { execmod };
+dontaudit untrusted_app proc:file { read };
+dontaudit untrusted_app proc_tty_drivers:file { read };
+dontaudit untrusted_app proc_net_tcp_udp:file { read };
+dontaudit untrusted_app serialno_prop:file { read };
+dontaudit untrusted_app oem_unlock_prop:file { read };
+dontaudit untrusted_app mnt_sdcard_file:lnk_file { read };
+dontaudit untrusted_app self:netlink_route_socket { bind };

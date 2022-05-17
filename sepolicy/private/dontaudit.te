@@ -1,8 +1,6 @@
-# b/148033913
-dontaudit fsck self:capability kill;
-
-# b/151195350
-dontaudit linkerconfig self:capability kill;
-
-# b/152468658
-dontaudit vdc self:capability kill;
+dontaudit boringssl_self_test self:capability { kill sys_admin };
+dontaudit fsck self:capability { kill sys_admin };
+dontaudit fsverity_init self:capability { sys_admin };
+dontaudit linkerconfig self:capability { kill sys_admin };
+dontaudit ueventd self:capability { kill sys_admin };
+dontaudit vdc self:capability { kill sys_admin };
