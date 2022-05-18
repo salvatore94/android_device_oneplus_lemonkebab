@@ -78,7 +78,7 @@ ro.vendor.product.manufacturer.db=OP_PHONE
 ro.vendor.product.device.db=OP_DEVICE
 
 # Radio
-ro.telephony.default_network=33,22
+ro.telephony.default_network=33,33
 
 # Touchscreen
 persist.vendor.qti.inputopts.enable=true
